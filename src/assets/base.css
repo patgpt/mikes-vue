@@ -1,0 +1,90 @@
+/* Global CSS for Neumorphic Design */
+
+/* Base */
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+/* Light Theme */
+:root {
+  --primary-color: #6db65b;
+  --accent-color: #ffc107;
+  --background-color: #e0e0e0;
+  --text-color: #333333;
+  --shadow-light: #ffffff;
+  --shadow-dark: #a3b1c6;
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+  --primary-color: #4a7a40;
+  --accent-color: #ffd54f;
+  --background-color: #333333;
+  --text-color: #e0e0e0;
+  --shadow-light: #474747;
+  --shadow-dark: #232323;
+}
+
+/* Neumorphic Styles */
+.neu-button {
+  background: var(--background-color);
+  border: none;
+  border-radius: 10px;
+  box-shadow:
+    5px 5px 10px var(--shadow-dark),
+    -5px -5px 10px var(--shadow-light);
+  padding: 10px 20px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.neu-button:active {
+  box-shadow:
+    inset 5px 5px 10px var(--shadow-dark),
+    inset -5px -5px 10px var(--shadow-light);
+}
+
+.neu-input {
+  background: var(--background-color);
+  border: none;
+  border-radius: 10px;
+  box-shadow:
+    inset 2px 2px 5px var(--shadow-dark),
+    inset -2px -2px 5px var(--shadow-light);
+  padding: 10px;
+  color: var(--text-color);
+}
+
+/* Utility Classes */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
